@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HelloWorld - application Layout</title>
+  <title>Ejemplo Layout</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,10 +9,10 @@
 <body>
 
 <header>
-	<h1>Codigo Facilito</h1>
+	<h1>Ejemplo Layout</h1>
 </header>
 <!--This execute the page that we structured and insert here into the layout -->
 <%= yield %>
-
+<p>This message comes from the ejemplo layout</p>
 </body>
 </html>
