@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :articles
   get 'welcome/index'
 
   root :to => 'welcome#index'  # redirect to the welcome page
