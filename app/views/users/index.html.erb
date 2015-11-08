@@ -16,6 +16,13 @@
     </tr>
   </thead>
 
+  <% numero= "holamundo" %>
+  <% if is_number(numero) %>
+    <b><%= numero %></b>
+  <% else %>
+    <b>Enviaste palabras</b>
+  <% end %>
+
   <tbody>
     <% @users.each do |user| %>
       <tr>
