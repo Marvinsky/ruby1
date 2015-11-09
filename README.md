@@ -26,3 +26,31 @@ Hacer una nueva venta - POST
 Actualizar el inventario - PUT
 Eliminar un producto - DELETE
 Mostrar mi inventario - GET
+_____________________________________________
+Base de datos relacional : 9gag
+
+User
+id_user
+
+Imagenes => post
+id_images
+id_user
+
+Un usuario puede tener multiples post
+
+Gema para la autenticacion
+
+tags
+
+post
+
+1 tag puede tener multiples posts
+1 post puede tener multiples tags
+
+Tabla intermedia => tagging
+tagging
+id_post =>id del articulo
+id_tag
+
+
+Abrimos un post, vamos a sacar de la tabla tagging todos los post que tengan el mismo id
