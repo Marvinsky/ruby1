@@ -12,6 +12,16 @@
 	<h1>Codigo Facilito</h1>
 </header>
 <!--This execute the page that we structured and insert here into the layout -->
+
+<nav class='navbar'>
+	<div class='navbar-inner'>
+		<ul>
+			<li><%= link_to 'Inicio', root_path %></li>
+			<li><%= link_to 'Posts', posts_path %></li>
+		</ul>
+	</div>
+</nav>
+
 <%= yield %>
 
 </body>

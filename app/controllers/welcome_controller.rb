@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  layout 'ejemplo' # Setting the layout from here
+  layout 'application' # Setting the layout from here
   def index
   		@tutor = "Codigo Facilito tutor"
   end
