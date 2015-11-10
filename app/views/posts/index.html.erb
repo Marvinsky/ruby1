@@ -2,12 +2,21 @@
 
 <h1>Listing Posts</h1>
 
+<ul class='thumbnails' id='posts'>
+
 <ul>
   <% @posts.each do |post| %>
-    <h3> <%= post.titulo %> </h3>
-    <% if post.has_photo %>
-      <%= image_tag post.photo_path, :width => 400, :height => 300, :crop => :fill %>
-    <% end %>
+  	<div id='post'>
+  		<li class='span3'>
+  		<div class='thumbnail'>
+    		<% if post.has_photo %>
+      			<%= image_tag post.photo_path, :width => 400, :height => 300, :crop => :fill %>
+    		<% end %>
+    		<div class='caption'>
+    			<h3> <%=  link_to post.titulo, post %> </h3>
+    		</div>
+    	</div>
+	</div>
   <% end %>
 </ul>
 

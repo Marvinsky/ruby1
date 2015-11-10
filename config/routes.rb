@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   resources :posts
   resources :users
   resources :articles
+  resources :user_sessions
+
+  get 'login' => 'user_sessions#new'
+  post 'login' => 'user_sessions#create'
+  delete 'logout' => 'user_sessions#destroy'
+
   get 'welcome/index'
 
   root :to => 'welcome#index'  # redirect to the welcome page
