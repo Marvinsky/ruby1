@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :usuarios
   resources :posts
   resources :users
   resources :articles
