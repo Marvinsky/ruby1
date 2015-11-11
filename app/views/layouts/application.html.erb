@@ -3,7 +3,7 @@
 <head>
   <title>HelloWorld - application Layout</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,10 +18,10 @@
 		<ul>
 			<li><%= link_to 'Inicio', root_path %></li>
 			<li><%= link_to 'Posts', posts_path %></li>
-			<li><%=  @current_user %></li>
+			<li><%=  current_user %></li>
 			<% if current_user %>
 				<li><%= link_to 'Nuevo articulo', new_article_path %></li>
-				<li><%= link_to 'Log out #{current_user.username}', logout_path %></li>
+				<li><%= link_to 'Log out #{current_user.username}', logout_path, method: :delete %></li>
 				<li><%= link_to 'Editar Usuario', edit_usuario_path(current_user) %></li>
 			<% else %>
 				<li><%= link_to 'log in', login_path %></li>

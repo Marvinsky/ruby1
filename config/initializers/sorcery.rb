@@ -172,6 +172,7 @@ Rails.application.config.sorcery.configure do |config|
   # config.salesforce.user_info_mapping = {:email => "email"}
 
   # --- user config ---
+  
   config.user_config do |user|
     # -- core --
     # specify username attributes, for example: [:username, :email].

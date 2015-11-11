@@ -1,16 +1,21 @@
 module UsersHelper
 
+  	# Returns the current logged-in user (if any).
   	def current_user
-    	if (user_id = session[:user_id])
-      		@current_user ||= User.find_by(id: user_id)
-    	elsif (user_id = cookies.signed[:user_id])
-      		raise       # The tests still pass, so this branch is currently untested.
-      		user = User.find_by(id: user_id)
-      		if user && user.authenticated?(cookies[:remember_token])
-        		login user
-        		@current_user = user
-      		end
-    	end
+  		#puts "CALLING CURRENT_USER IN THE HELPER"
+    	#@usernow = User.find_by(id: request.session_options[:id])
+    	#puts request.session_options[:id]
+    	puts "WTDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+    	puts session[:id]
+    	puts "after"
+    	@current_user ||= User.find_by(id: session[:id])
+    	#@current_user ||= User.find_by(id: request.session_options[:id])
+  	end
+
+  	# Logs out the current user.
+  	def log_out
+    	session.delete(:id)
+    	@current_user = nil
   	end
 
 
